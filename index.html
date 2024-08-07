@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venom Bot QR Scanner</title>
+</head>
+<body>
+  <button id="scanQrButton" class="btn btn-primary">Escanear QR</button>
+  <button id="sendMessagge" class="btn btn-primary">Mandar mensaje</button>
+
+  <script src="./renderer.js"></script>
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sultan Bot</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="main-title d-flex justify-content-center align-items-center">Sultan Bot</h1>
+        <p class="subtitle">
+            Bienvenido a Sultan Bot, una aplicación para enviar mensajes y fotos a través de WhatsApp Web.
+        </p>
+        <button class="btn btn-primary" id="scanQrButton">Escanear QR</button>
+        <img id="qrImage" src="" alt="QR Code" style="display: none;"/>
+
+        
+        <p class="subtitle mt-3">
+            Instrucciones de uso:
+            <br>Primero debes cargar los contactos desde un archivo .txt, si se cargo sin errores, podrás enviar mensajes y fotos a los contactos cargados. 
+            <br>- Para enviar un mensaje escribes en el area de texto y presiona enviar.
+            <br>- Para enviar imagenes, cargas la imagen, escribes el caption y presionas el botón para enviarla.
+        </p>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="contacts_box ">
+            <label class="d-flex justify-content-center align-items-center" for="recipients">Cargar destinatarios</label>
+            <div class="d-flex justify-content-center align-items-center">
+                <button class="d-flex justify-content-center align-items-center">
+                    <img class="img_upload" src="arrow-up-solid.svg" alt="Upload txt"/>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="message-section">
+            <label for="message">Enviar Mensaje</label>
+            <input type="text" id="message" class="form-control" placeholder="Escribe tu mensaje aquí...">
+            <div class="d-flex justify-content-center align-items-center">
+                <button id="sendMessagge" class="btn btn-success mt-2">Enviar</button>
+            </div>
+          </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="photo-section">
+            <label for="caption">Enviar imagen</label>
+            <input type="text" id="caption" class="form-control" placeholder="Escribe el caption aquí...">
+            <div class="d-flex justify-content-center align-items-center">
+                <button id="sendPhoto" class="btn btn-success mt-2">Enviar</button>
+            </div>
+          </div>
+    </div>
+    
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">&copy; 2024 Sultan, Inc. By Ionas Josponis</span>
+          </div>
+        </footer>
+      </div>
+    
+  
+  <script src="renderer.js"></script>
+</body>
+</html>
